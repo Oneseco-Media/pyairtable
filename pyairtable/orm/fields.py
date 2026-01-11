@@ -539,7 +539,7 @@ class _ListFieldBase(
         # and persist it later when they call .save(), we need to
         # set the list as the field's value.
         instance._fields[self.field_name] = value
-        return cast(T_ORM_List, value)
+        return value
 
     def valid_or_raise(self, value: Any) -> None:
         super().valid_or_raise(value)
