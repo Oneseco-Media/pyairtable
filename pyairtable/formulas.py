@@ -1140,5 +1140,5 @@ def YEAR(date: Any, /) -> FunctionCall:
     return FunctionCall('YEAR', date)
 
 
-# [[[end]]] (checksum: 6d21fb2dafa8810cefa1caad266e1453)
+# [[[end]]] (sum: bSH7La+ogQ)
 # fmt: on

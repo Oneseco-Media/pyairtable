@@ -539,7 +539,7 @@ class _ListFieldBase(
         # and persist it later when they call .save(), we need to
         # set the list as the field's value.
         instance._fields[self.field_name] = value
-        return cast(T_ORM_List, value)
+        return value
 
     def valid_or_raise(self, value: Any) -> None:
         super().valid_or_raise(value)
@@ -1376,7 +1376,7 @@ class RequiredUrlField(UrlField, _BasicFieldWithRequiredValue[str]):
     """
 
 
-# [[[end]]] (checksum: 5078434bb8fd65fa8f0be48de6915c2d)
+# [[[end]]] (sum: UHhDS7j9Zf)
 # fmt: on
 
 
@@ -1587,7 +1587,7 @@ __all__ = [
     "TextField",
     "UrlField",
 ]
-# [[[end]]] (checksum: 87b0a100c9e30523d9aab8cc935c7960)
+# [[[end]]] (sum: h7ChAMnjBS)
 
 
 # Delayed import to avoid circular dependency

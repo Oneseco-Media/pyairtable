@@ -163,7 +163,7 @@ def enterprise_only(wrapped: F, /, modify_docstring: bool = True) -> F:
         for name, obj in vars(wrapped).items():
             if inspect.isfunction(obj):
                 setattr(wrapped, name, enterprise_only(obj))
-        return cast(F, wrapped)
+        return wrapped
 
     @wraps(wrapped)
     def _decorated(*args: Any, **kwargs: Any) -> Any:
@@ -342,4 +342,4 @@ __all__ = [
     "is_table_id",
     "is_user_id",
 ]
-# [[[end]]] (checksum: 7cf950d19fee128ae3f395ddbc475c0f)
+# [[[end]]] (sum: fPlQ0Z/uEo)
